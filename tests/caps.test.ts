@@ -38,8 +38,13 @@ describe('Check capsed with passed percentage value', function() {
     expect(result).equal(false)
   })
 
-  it('Qwertyasdt (10) with percentage 10 equals false', function() {
+  it('qwertyasdt (10) with percentage 10 equals false', function() {
     const result = caps.capsed('qwertyasdt', { percentage: 10 })
     expect(result).equal(false)
+  })
+
+  it('Qwertyast (10) with percentage 10 equals true', function() {
+    const result = caps.capsed('Qwertyasdt', { percentage: 10 })
+    expect(result).equal(true)
   })
 })
