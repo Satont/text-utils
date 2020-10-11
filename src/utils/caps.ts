@@ -12,6 +12,8 @@ export default new class Caps {
   }
 
   capsed(input: string, { percentage = 50 } = {}): boolean {
-    return Math.ceil(this.checkCapsLength(input) / (input.length / 100)) >= percentage
+    const capsLength = this.checkCapsLength(input)
+
+    return Math.ceil(capsLength / (input.length / 100)) >= percentage
   }
 }
