@@ -1,5 +1,5 @@
 {
-  "name": "text-utils",
+  "name": "@satont/text-utils",
   "version": "1.0.0",
   "description": "Analyze text and other helpers",
   "main": "lib/index.js",
