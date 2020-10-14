@@ -1,5 +1,5 @@
 {
-  "inputFiles": ["./src"],
+  "inputFiles": ["./src/utils"],
   "theme": "default",
   "includeVersion": false,
   "readme": "none",
