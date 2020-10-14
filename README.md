@@ -10,8 +10,6 @@ Text helpers: detect links, detect caps, and more tools.
 
 ## Installation
 
-Install package:
-
 ```shell
 npm i text-utils
 ```
