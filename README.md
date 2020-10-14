@@ -19,14 +19,14 @@ npm i @satont/text-utils
 Import via ES6:
 
 ```typescript
-import { caps } from 'text-utils'
+import { caps } from '@satont/text-utils'
 
 console.log(caps.isCapsed('HELLO WORLD'))
 ```
 
 Or CommonJS:
 ```js
-const { caps } = require('text-utils')
+const { caps } = require('@satont/text-utils')
 
 console.log(caps.isCapsed('HELLO WORLD'))
 ```
