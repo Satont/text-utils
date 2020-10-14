@@ -3,48 +3,48 @@ import { caps } from '../src/index';
 
 describe('With string length 10', function() {
   it('QwErTyAsDf (10) equals 50', function() {
-    const result = caps.percentage('QwErTyAsDf')
+    const result = caps.percentageOf('QwErTyAsDf')
     expect(result).equal(50)
   })
 })
 
 describe('With string length 11', function() {
   it('QwErTyAsDfF (11) equals 55', function() {
-    const result = caps.percentage('QwErTyAsDfF')
+    const result = caps.percentageOf('QwErTyAsDfF')
     expect(result).equal(55)
   })
 })
 
-describe('Check capsed with not passed percentage value', function() {
+describe('Check isCapsed with not passed percentageOf value', function() {
   it('QwErTyAsDf (10) equals true', function() {
-    const result = caps.capsed('QwErTyAsDf')
+    const result = caps.isCapsed('QwErTyAsDf')
     expect(result).equal(true)
   })
 
   it('qwertyasds (10) equals false', function() {
-    const result = caps.capsed('qwertyasds')
+    const result = caps.isCapsed('qwertyasds')
     expect(result).equal(false)
   })
 })
 
-describe('Check capsed with passed percentage value', function() {
-  it('QwErTyAsDf (10) with percentage 50 equals true', function() {
-    const result = caps.capsed('QwErTyAsDf', { percentage: 50 })
+describe('Check isCapsed with passed percentageOf value', function() {
+  it('QwErTyAsDf (10) with percentageOf 50 equals true', function() {
+    const result = caps.isCapsed('QwErTyAsDf', { percentage: 50 })
     expect(result).equal(true)
   })
 
-  it('QwErTyAsDs (10) with percentage 60 equals false', function() {
-    const result = caps.capsed('QwErTyAsDs', { percentage: 60 })
+  it('QwErTyAsDs (10) with percentageOf 60 equals false', function() {
+    const result = caps.isCapsed('QwErTyAsDs', { percentage: 60 })
     expect(result).equal(false)
   })
 
-  it('qwertyasdt (10) with percentage 10 equals false', function() {
-    const result = caps.capsed('qwertyasdt', { percentage: 10 })
+  it('qwertyasdt (10) with percentageOf 10 equals false', function() {
+    const result = caps.isCapsed('qwertyasdt', { percentage: 10 })
     expect(result).equal(false)
   })
 
-  it('Qwertyast (10) with percentage 10 equals true', function() {
-    const result = caps.capsed('Qwertyasdt', { percentage: 10 })
+  it('Qwertyast (10) with percentageOf 10 equals true', function() {
+    const result = caps.isCapsed('Qwertyasdt', { percentage: 10 })
     expect(result).equal(true)
   })
 })

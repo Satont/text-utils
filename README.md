@@ -1,6 +1,6 @@
 # Textalyze
 
-![](https://img.shields.io/github/workflow/status/Satont/text-utils/Build%20Project/master) ![](https://img.shields.io/github/workflow/status/Satont/text-utils/Test%20Project/master?label=tests) [![codecov](https://codecov.io/gh/Satont/text-utils/branch/main/graph/badge.svg?token=ABFL6BTPXK)](undefined)
+![](https://img.shields.io/github/workflow/status/Satont/text-utils/Build%20Project/master) ![](https://img.shields.io/github/workflow/status/Satont/text-utils/Test%20Project/master?label=tests) [![codecov](https://codecov.io/gh/Satont/text-utils/branch/main/graph/badge.svg?token=ABFL6BTPXK)]()
 
 Text helpers: detect links, detect caps, and more tools.
 
