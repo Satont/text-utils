@@ -2,15 +2,20 @@
   "name": "text-utils",
   "version": "1.0.0",
   "description": "Analyze text and other helpers",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
     "coverage:upload": "codecov",
-    "docs": "typedoc; touch docs/.nojekyll"
+    "docs": "typedoc; touch docs/.nojekyll",
+    "prepare": "npm run build",
+    "prepublishOnly" : "npm test",
+    "preversion" : "npm test",
+    "postversion" : "git push && git push --tags"
   },
   "keywords": [
     "text",
