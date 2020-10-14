@@ -1,10 +1,12 @@
 {
   "name": "@satont/text-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Analyze text and other helpers",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
@@ -13,9 +15,9 @@
     "coverage:upload": "codecov",
     "docs": "typedoc; touch docs/.nojekyll",
     "prepare": "npm run build",
-    "prepublishOnly" : "npm test",
-    "preversion" : "npm test",
-    "postversion" : "git push && git push --tags"
+    "prepublishOnly": "npm test",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "text",
