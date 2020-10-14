@@ -16,6 +16,8 @@ Install package:
 npm i text-utils
 ```
 
+## Usage
+
 Import via ES6:
 
 ```typescript
