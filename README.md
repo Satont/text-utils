@@ -4,7 +4,7 @@
 
 Text helpers: detect links, detect caps, and more tools.
 
-[Docs](https://satont.github.io/text-utils)
+[Documentation](https://satont.github.io/text-utils/)
 
 ## Installation
 
