@@ -1,7 +1,12 @@
-const regular = /[A-Z]/g
-
 const checkCapsLength = (input: string) => {
-  return (input.match(regular) || []).length
+  let capsLength = 0
+  for (let i = 0; i < input.length; i++) {
+    if (input.charAt(i) == input.charAt(i).toUpperCase()) {
+      capsLength++
+    }
+  }
+
+  return capsLength
 }
 
 export const percentageOf = (input: string): number => {
