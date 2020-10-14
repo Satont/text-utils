@@ -11,7 +11,7 @@ Text helpers: detect links, detect caps, and more tools.
 ## Installation
 
 ```shell
-npm i text-utils
+npm i @satont/text-utils
 ```
 
 ## Usage
