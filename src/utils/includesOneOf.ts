@@ -1,7 +1,3 @@
-export default (input: string, arrayOfStrings: string[]): boolean => {
-  if(!Array.isArray(arrayOfStrings)) {
-    throw new Error('includesOneOf only accepts an array')
-  }
-
+export default function includesOneOf(input: string, arrayOfStrings: string[]): boolean {
   return arrayOfStrings.some(str => input.includes(str))
 }

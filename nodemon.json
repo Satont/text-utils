@@ -1,0 +1,5 @@
+{
+  "watch": ["src", "./typedoc.json"],
+  "exec": "npm run docs",
+  "ext": "ts"
+}

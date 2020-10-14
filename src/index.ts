@@ -1,15 +1,3 @@
-import caps from './utils/caps'
-import link from './utils/link'
-import includesOneOf from './utils/includesOneOf'
-
-export {
-  caps,
-  link,
-  includesOneOf
-}
-
-export default {
-  caps,
-  link,
-  includesOneOf
-}
+export * as caps from './utils/caps'
+export * as link from './utils/link'
+export { default as includesOneOf } from './utils/includesOneOf'

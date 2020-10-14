@@ -1,19 +1,17 @@
-export default new class Caps {
-  private readonly regular = /[A-Z]/g
+const regular = /[A-Z]/g
 
-  private checkCapsLength(input: string) {
-    return (input.match(this.regular) || []).length
-  }
+const checkCapsLength = (input: string) => {
+  return (input.match(regular) || []).length
+}
 
-  percentage(input: string): number {
-    const capsLength = this.checkCapsLength(input)
+export const percentageOf = (input: string): number => {
+  const capsLength = checkCapsLength(input)
 
-    return Math.ceil((100 * capsLength) / input.length)
-  }
+  return Math.ceil((100 * capsLength) / input.length)
+}
 
-  capsed(input: string, { percentage = 50 } = {}): boolean {
-    const capsLength = this.checkCapsLength(input)
+export const isCapsed = (input: string, { percentage = 50 } = {}): boolean => {
+  const capsLength = checkCapsLength(input)
 
-    return Math.ceil(capsLength / (input.length / 100)) >= percentage
-  }
+  return Math.ceil(capsLength / (input.length / 100)) >= percentage
 }

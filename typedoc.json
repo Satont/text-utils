@@ -1,0 +1,8 @@
+{
+  "inputFiles": ["./src"],
+  "theme": "default",
+  "includeVersion": false,
+  "readme": "none",
+  "excludePrivate": true,
+  "excludeNotExported": true
+}
