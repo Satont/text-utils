@@ -16,7 +16,7 @@
     "docs": "typedoc; touch docs/.nojekyll",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
-    "preversion": "npm test",
+    "preversion": "npm test && npm run docs",
     "postversion": "git push && git push --tags"
   },
   "keywords": [
