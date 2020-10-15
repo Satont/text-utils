@@ -13,6 +13,30 @@ describe('Includes github.com', function() {
   })
 })
 
+describe('Includes confused. me', function() {
+  it('withSpaces = false', function() {
+    const result = link.includes('confused. me')
+    expect(result).equal(false)
+  })
+
+  it('withSpaces = true', function() {
+    const result = link.includes('confused. me', { withSpaces: true })
+    expect(result).equal(true)
+  })
+})
+
+describe('Includes t.me/satont', function() {
+  it('withSpaces = false', function() {
+    const result = link.includes('t.me/satont')
+    expect(result).equal(true)
+  })
+
+  it('withSpaces = true', function() {
+    const result = link.includes('t.me/satont', { withSpaces: true })
+    expect(result).equal(true)
+  })
+})
+
 describe('Includes github . com', function() {
   it('withSpaces = false', function() {
     const result = link.includes('github . com')

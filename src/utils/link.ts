@@ -4,9 +4,10 @@ type LinksOptions = {
   withSpaces?: boolean,
 }
 
+const regularSybols = `[а-яa-z0-9-ё]`
 const regulars = [
-  new RegExp(`(www)? ??\\.? ?[a-zA-Z0-9]+([a-zA-Z0-9-]+) ??\\. ?(${tlds.join('|')})(?=\\P{L}|$)`, 'igu'),
-  new RegExp(`[a-zA-Z0-9]+([a-zA-Z0-9-]+)?\\.(${tlds.join('|')})(?=\\P{L}|$)`, 'igu'),
+  new RegExp(`${regularSybols}+\\s*\\.\\s*(${tlds.join('|')})`, 'igu'),
+  new RegExp(`${regularSybols}+\\.(${tlds.join('|')})`, 'igu'),
 ]
 
 export const includes = (input: string, { withSpaces = false } = {} as LinksOptions): boolean => {
