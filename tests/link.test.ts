@@ -11,6 +11,18 @@ describe('Includes github.com', function() {
     const result = link.includes('github.com', { withSpaces: true })
     expect(result).equal(true)
   })
+
+  it('withSpaces = false', function() {
+    const result = link.overlaps('github.com')
+    expect(result.length).equal(1)
+    expect(result[0]).equal('github.co')
+  })
+
+  it('withSpaces = true', function() {
+    const result = link.overlaps('github.com', { withSpaces: true })
+    expect(result.length).equal(1)
+    expect(result[0]).equal('github.co')
+  })
 })
 
 describe('Includes confused. me', function() {
@@ -22,6 +34,17 @@ describe('Includes confused. me', function() {
   it('withSpaces = true', function() {
     const result = link.includes('confused. me', { withSpaces: true })
     expect(result).equal(true)
+  })
+
+  it('withSpaces = false', function() {
+    const result = link.overlaps('confused. me')
+    expect(result).equal(null)
+  })
+
+  it('withSpaces = true', function() {
+    const result = link.overlaps('confused. me', { withSpaces: true })
+    expect(result.length).equal(1)
+    expect(result[0]).equal('confused. me')
   })
 })
 
@@ -128,3 +151,4 @@ describe('Message "github .com, gitlab .com"', function() {
     expect(result).equal(2)
   })
 })
+

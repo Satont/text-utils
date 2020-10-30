@@ -17,3 +17,7 @@ export const includes = (input: string, { withSpaces = false } = {} as LinksOpti
 export const length = (input: string, { withSpaces = false } = {} as LinksOptions): number => {
   return (input.match(regulars[withSpaces ? 0 : 1]) || []).length
 }
+
+export const overlaps = (input: string, { withSpaces = false } = {} as LinksOptions): RegExpMatchArray => {
+  return input.match(regulars[withSpaces ? 0 : 1])
+}
