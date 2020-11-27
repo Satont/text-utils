@@ -48,3 +48,8 @@ describe('Check isCapsed with passed percentageOf value', function() {
     expect(result).equal(true)
   })
 })
+
+describe('Test for lwjerri', function() {
+  const result = caps.isCapsed('t e s t . c o m', { percentage: 50 })
+  expect(result).equal(false)
+})
