@@ -2,7 +2,7 @@ const checkCapsLength = (input: string) => {
   let capsLength = 0
   input = input.replace(/\s/g, '')
   for (let i = 0; i < input.length; i++) {
-    if (input.charAt(i) == input.charAt(i).toUpperCase()) {
+    if (input.charAt(i) == input.charAt(i).toLocaleUpperCase() && isNaN(parseInt(input.charAt(i)))) {
       capsLength++
     }
   }
