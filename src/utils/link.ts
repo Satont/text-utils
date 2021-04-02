@@ -1,23 +1,15 @@
 import tlds from 'tlds'
 
-type LinksOptions = {
-  withSpaces?: boolean,
+const regular = new RegExp(`[a-zA-Z0-9]+([a-zA-Z0-9-]+)?\\.(${tlds.join('|')})(?=\\P{L}|$)`, 'igu')
+
+export const includes = (input: string): boolean => {
+  return input.search(regular) >= 0
 }
 
-const regularSybols = `[а-яa-z0-9-ё]`
-const regulars = [
-  new RegExp(`${regularSybols}+\\s*\\.\\s*(${tlds.join('|')})`, 'igu'),
-  new RegExp(`${regularSybols}+\\.(${tlds.join('|')})`, 'igu'),
-]
-
-export const includes = (input: string, { withSpaces = false } = {} as LinksOptions): boolean => {
-  return input.search(regulars[withSpaces ? 0 : 1]) >= 0
+export const length = (input: string): number => {
+  return (input.match(regular) || []).length
 }
 
-export const length = (input: string, { withSpaces = false } = {} as LinksOptions): number => {
-  return (input.match(regulars[withSpaces ? 0 : 1]) || []).length
-}
-
-export const overlaps = (input: string, { withSpaces = false } = {} as LinksOptions): RegExpMatchArray => {
-  return input.match(regulars[withSpaces ? 0 : 1])
+export const overlaps = (input: string): RegExpMatchArray => {
+  return input.match(regular) || []
 }
